@@ -3,8 +3,7 @@ from typing import List
 
 class Solution:
     def restoreString(self, s: str, indices: List[int]) -> str:
-        shuffled = dict(zip(indices, s))
-        answer = ""
+        shuffled, answer = dict(zip(indices, s)), ""
         for i in range(len(indices)):
             answer += shuffled[i]
         return answer
